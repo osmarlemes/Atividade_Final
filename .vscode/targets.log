@@ -1,0 +1,1693 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Wed Aug 24 19:52:03 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 8)
+FREERTOS_DIR := /home/osmar/FreeRTOSv202112.00/FreeRTOS
+# environment
+WSLENV = VSCODE_WSL_EXT_LOCATION/up
+# default
+.SHELLFLAGS := -c
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 73)
+CPPFLAGS := -I. -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include -I/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include -DBUILD_DIR=\"/home/osmar/FreeRTOSv202112.00/IOT011/Atividade_Final/build\" -D_WINDOWS_ -DTRACE_ON_ENTER=0 -DprojCOVERAGE_TEST=0
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile (from 'Makefile', line 10)
+FREERTOS_PLUS_DIR_REL := ../../FreeRTOS-Plus
+# makefile
+CURDIR := /home/osmar/FreeRTOSv202112.00/IOT011/Atividade_Final
+# makefile
+SHELL = /bin/sh
+# makefile (from 'Makefile', line 2)
+BIN := atividade_1
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
+# environment
+_ = /home/osmar/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/node
+# makefile (from 'Makefile', line 85)
+CFLAGS := -ggdb3 -O3
+# makefile (from 'build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/streamports/File/trcStreamingPort.d', line 1)
+MAKEFILE_LIST :=  Makefile build/main.d build/app.d build/console.d build/code_coverage_additions.d build/run-time-stats-utils.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/stream_buffer.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/queue.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/croutine.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/list.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/event_groups.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/tasks.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/timers.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/MemMang/heap_3.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils/wait_for_event.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/port.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/AbortDelay.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/BlockQ.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/blocktim.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/countsem.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/death.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/dynamic.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/EventGroupsDemo.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/flop.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/GenQTest.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/integer.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/IntSemTest.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferAMP.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferDemo.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/PollQ.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QPeek.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueOverwrite.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSet.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSetPolling.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/recmutex.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/semtest.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StaticAllocation.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferDemo.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferInterrupt.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TaskNotify.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TimerDemo.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcKernelPort.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcSnapshotRecorder.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcStreamingRecorder.d build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/streamports/File/trcStreamingPort.d
+# makefile (from 'Makefile', line 11)
+FREERTOS_PLUS_DIR := /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+VSCODE_CWD = /mnt/c/Users/osmar/AppData/Local/Programs/Microsoft VS Code
+# makefile (from 'Makefile', line 20)
+INCLUDE_DIRS := -I. -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include -I/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'Makefile', line 107)
+OBJ_FILES = $(SOURCE_FILES:%.c=$(BUILD_DIR)/%.o)
+# environment
+PATH = /home/osmar/.vscode-server/bin/e4503b30fc78200f846c62cf8091b76ff5547662/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Falcon/MinGW/bin:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/STMicroelectronics/st_toolset/asm:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/GnuPG/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/osmar/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/osmar/AppData/Local/GitHubDesktop/bin:/mnt/c/Program Files (x86)/COSMIC/FSE_Compilers/CXSTM8:/mnt/c/Program Files (x86)/COSMIC/FSE_Compilers/CXSTM32:/mnt/c/Users/osmar/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+# makefile (from 'Makefile', line 131)
+GPROF_OPTIONS := --directory-path=-I. -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include -I/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-c9674252-7986-4ffd-9081-818a211df441.sock
+# makefile (from 'Makefile', line 86)
+LDFLAGS := -ggdb3 -pthread -O3
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# automatic
+%F = $(notdir $%)
+# environment
+PWD = /home/osmar/FreeRTOSv202112.00/IOT011/Atividade_Final
+# default
+.LOADED := 
+# environment
+WSL_INTEROP = /run/WSL/11_interop
+# makefile (from 'Makefile', line 78)
+SOURCE_FILES := main.c app.c console.c code_coverage_additions.c run-time-stats-utils.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/stream_buffer.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/queue.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/croutine.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/list.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/event_groups.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/tasks.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/timers.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/MemMang/heap_3.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils/wait_for_event.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/port.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/AbortDelay.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/BlockQ.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/blocktim.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/countsem.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/death.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/dynamic.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/EventGroupsDemo.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/flop.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/GenQTest.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/integer.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/IntSemTest.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferAMP.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferDemo.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/PollQ.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QPeek.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueOverwrite.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSet.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSetPolling.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/recmutex.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/semtest.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StaticAllocation.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferDemo.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferInterrupt.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TaskNotify.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TimerDemo.c /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcKernelPort.c /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcSnapshotRecorder.c /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcStreamingRecorder.c /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/streamports/File/trcStreamingPort.c
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/osmar
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+LOGNAME = osmar
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# makefile (from 'Makefile', line 5)
+BUILD_DIR_ABS := /home/osmar/FreeRTOSv202112.00/IOT011/Atividade_Final/build
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# makefile (from 'Makefile', line 109)
+DEP_FILE = $(OBJ_FILES:%.o=%.d)
+# environment
+SHLVL = 0
+# makefile (from 'Makefile', line 1)
+CC := gcc
+# makefile (from 'Makefile', line 4)
+BUILD_DIR := ./build
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = osmar
+# makefile
+.DEFAULT_GOAL := all
+# environment
+NAME = DESKTOP-QTDGT4P
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/osmar/.vscode/extensions/ms-vscode-remote.remote-wsl-0.66.3
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+VSCODE_HANDLES_SIGPIPE = true
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+LC_ALL = C
+# environment
+HOSTTYPE = x86_64
+# automatic
+^F = $(notdir $^)
+# makefile (from 'Makefile', line 13)
+KERNEL_DIR := /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# makefile (from 'Makefile', line 7)
+FREERTOS_DIR_REL := ../../FreeRTOS
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+WSL_DISTRO_NAME = Ubuntu
+# environment
+MOTD_SHOWN = update-motd
+# variable set hash-table stats:
+# Load=81/1024=8%, Rehash=0, Collisions=18/346=5%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix (device 2064, inode 48151): No files, no impossibilities so far.
+# /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace (device 2064, inode 66853): No files, no impossibilities so far.
+# . (device 2064, inode 79031): 16 files, no impossibilities.
+# /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source (device 2064, inode 47763): 12 files, no impossibilities.
+# /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/MemMang (device 2064, inode 48574): No files, no impossibilities so far.
+# /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils (device 2064, inode 48155): No files, no impossibilities so far.
+# /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/streamports/File (device 2064, inode 66878): No files, no impossibilities so far.
+# /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal (device 2064, inode 52967): No files, no impossibilities so far.
+
+# 28 files, no impossibilities in 8 directories.
+
+# Implicit Rules
+
+build/%.o: %.c Makefile
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/death.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:51.2870624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+run-time-stats-utils.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 19:19:00.6709688
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferDemo.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferDemo.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferDemo.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/message_buffer.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/stream_buffer.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/MessageBufferDemo.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferDemo'
+#  Last modified 2022-08-23 20:13:52.1570624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/integer.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/AbortDelay.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/QueueOverwrite.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/IntSemTest.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:51.8670624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferInterrupt.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+ 
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/integer.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:51.7770624
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/EventGroupsDemo.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/EventGroupsDemo.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/EventGroupsDemo.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/event_groups.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/EventGroupsDemo.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/EventGroupsDemo'
+#  Last modified 2022-08-23 20:13:51.5170624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/stream_buffer.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+build/main.o: main.c Makefile main.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h console.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'main'
+#  Last modified 2022-08-23 20:13:48.3470624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/recmutex.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:52.6970624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/PollQ.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/BlockQ.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/event_groups.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/dynamic.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+build/run-time-stats-utils.o: run-time-stats-utils.c Makefile run-time-stats-utils.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'run-time-stats-utils'
+#  Last modified 2022-08-23 20:13:48.6670624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:42
+#  File has been updated.
+#  Successfully updated.
+
+all: atividade_1
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcSnapshotRecorder.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcSnapshotRecorder.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcSnapshotRecorder.c /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcSnapshotRecorder'
+#  Last modified 2022-08-23 20:13:54.6170624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferDemo.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferAMP.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:51.9670624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+build/atividade_1: build/main.o build/app.o build/console.o build/code_coverage_additions.o build/run-time-stats-utils.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/stream_buffer.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/queue.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/croutine.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/list.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/event_groups.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/tasks.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/timers.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/MemMang/heap_3.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils/wait_for_event.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/port.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/AbortDelay.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/BlockQ.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/blocktim.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/countsem.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/death.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/dynamic.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/EventGroupsDemo.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/flop.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/GenQTest.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/integer.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/IntSemTest.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferAMP.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferDemo.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/PollQ.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QPeek.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueOverwrite.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSet.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSetPolling.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/recmutex.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/semtest.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StaticAllocation.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferDemo.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferInterrupt.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TaskNotify.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TimerDemo.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcKernelPort.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcSnapshotRecorder.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcStreamingRecorder.o build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/streamports/File/trcStreamingPort.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-23 20:13:54.9170624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 114):
+	-mkdir -p ${@D}
+	$(CC) $^ ${LDFLAGS} -o $@
+
+.PHONY: clean all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/stream_buffer.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/stream_buffer.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/stream_buffer.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/stream_buffer.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/stream_buffer'
+#  Last modified 2022-08-23 20:13:48.9970624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/blocktim.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/queue.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/queue.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/queue.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/queue'
+#  Last modified 2022-08-23 20:13:49.4870624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/blocktim.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:51.1470624
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcStreamingRecorder.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcStreamingRecorder.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcStreamingRecorder.c /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcStreamingRecorder'
+#  Last modified 2022-08-23 20:13:54.6670624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TimerDemo.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TimerDemo.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TimerDemo.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/TimerDemo.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TimerDemo'
+#  Last modified 2022-08-23 20:13:53.6170624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/EventGroupsDemo.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+main.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 19:19:00.6709688
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferInterrupt.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:53.3370624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/StreamBufferInterrupt.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/timers.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:50.5970624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/PollQ.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/BlockQ.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/dynamic.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcSnapshotRecorder.c:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2021-12-22 17:22:42
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/GenQTest.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:51.7170624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/port.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:50.8470624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/MessageBufferDemo.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/stream_buffer.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/queue.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcStreamingRecorder.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:42
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/croutine.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:49.5070624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QPeek.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:52.3070624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TimerDemo.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 19:19:00.6709688
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/EventGroupsDemo.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/death.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/death.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/death.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/death.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/death'
+#  Last modified 2022-08-23 20:13:51.2970624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+trcSnapshotConfig.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 19:19:00.6709688
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/semtest.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:52.7970624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/tasks.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:50.3770624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcKernelPort.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:53.7170624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSetPolling.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:52.6270624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/MemMang/heap_3.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:50.6570624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/list.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/IntSemTest.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/IntSemTest.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/IntSemTest.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/IntSemTest.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/IntSemTest'
+#  Last modified 2022-08-23 20:13:51.8770624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/message_buffer.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferDemo.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/stack_macros.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/recmutex.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/recmutex.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/recmutex.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/recmutex.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/recmutex'
+#  Last modified 2022-08-23 20:13:52.7170624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/TimerDemo.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TaskNotify.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:53.4470624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/list.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:49.5670624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/code_coverage_additions.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:48.5870624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/recmutex.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/death.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferDemo.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:52.1370624
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferAMP.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferAMP.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferAMP.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/message_buffer.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/stream_buffer.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/MessageBufferAMP.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferAMP'
+#  Last modified 2022-08-23 20:13:51.9770624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+code_coverage_additions.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 19:19:00.6709688
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils/wait_for_event.d:
+ 
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:50.7270624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StaticAllocation.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:52.9370624
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/blocktim.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/blocktim.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/blocktim.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/blocktim.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/blocktim'
+#  Last modified 2022-08-23 20:13:51.1570624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/IntSemTest.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/flop.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:51.5970624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/croutine.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/StreamBufferDemo.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSet.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:52.5470624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/countsem.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:51.2270624
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/timers.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/timers.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/timers.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/timers'
+#  Last modified 2022-08-23 20:13:50.6070624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/MessageBufferAMP.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/GenQTest.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/GenQTest.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/GenQTest.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/GenQTest.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/GenQTest'
+#  Last modified 2022-08-23 20:13:51.7270624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/death.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/port.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/port.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/port.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils/wait_for_event.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/port'
+#  Last modified 2022-08-23 20:13:50.8670624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueOverwrite.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:52.3670624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:42
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+FreeRTOSConfig.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 19:19:00.6709688
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/blocktim.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/croutine.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/croutine.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/croutine.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/croutine.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/croutine'
+#  Last modified 2022-08-23 20:13:49.5170624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QPeek.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QPeek.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QPeek.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/QPeek.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QPeek'
+#  Last modified 2022-08-23 20:13:52.3170624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:42
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/IntSemTest.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/timers.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/recmutex.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/EventGroupsDemo.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:51.4970624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/semtest.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/semtest.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/semtest.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/semtest.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/semtest'
+#  Last modified 2022-08-23 20:13:52.8070624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/GenQTest.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/streamports/File/trcStreamingPort.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:54.6870624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/tasks.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/tasks.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/tasks.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/stack_macros.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/tasks'
+#  Last modified 2022-08-23 20:13:50.4270624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/port.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/MessageBufferAMP.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+ 
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcKernelPort.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcKernelPort.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcKernelPort.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/event_groups.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/stream_buffer.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcKernelPort'
+#  Last modified 2022-08-23 20:13:53.7270624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSetPolling.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSetPolling.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSetPolling.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/QueueSetPolling.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSetPolling'
+#  Last modified 2022-08-23 20:13:52.6370624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/AbortDelay.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:50.9770624
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/MemMang/heap_3.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/MemMang/heap_3.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/MemMang/heap_3.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/MemMang/heap_3'
+#  Last modified 2022-08-23 20:13:50.6670624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/croutine.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QPeek.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+build/app.o: app.c Makefile app.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h console.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'app'
+#  Last modified 2022-08-23 20:13:48.4370624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+app.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:12:26.6270624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/console.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:48.4870624
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TaskNotify.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TaskNotify.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TaskNotify.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/TaskNotify.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TaskNotify'
+#  Last modified 2022-08-23 20:13:53.4670624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/list.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/list.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/list.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/list'
+#  Last modified 2022-08-23 20:13:49.5870624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+build/code_coverage_additions.o: code_coverage_additions.c Makefile code_coverage_additions.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/event_groups.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/stream_buffer.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/message_buffer.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/stream_buffer.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'code_coverage_additions'
+#  Last modified 2022-08-23 20:13:48.6070624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 128):
+	-rm -rf $(BUILD_DIR)
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/PollQ.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:52.2370624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/BlockQ.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:51.0570624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/event_groups.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:49.7370624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+console.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 19:19:00.6709688
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/semtest.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/dynamic.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:51.3770624
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils/wait_for_event.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils/wait_for_event.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils/wait_for_event.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils/wait_for_event.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils/wait_for_event'
+#  Last modified 2022-08-23 20:13:50.7370624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/tasks.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StaticAllocation.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StaticAllocation.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StaticAllocation.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/event_groups.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/StaticAllocation.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StaticAllocation'
+#  Last modified 2022-08-23 20:13:52.9570624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+trcConfig.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 19:19:00.6709688
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/GenQTest.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcKernelPort.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:42
+#  File has been updated.
+#  Successfully updated.
+
+profile:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 133):
+	gprof -a -p --all-lines $(GPROF_OPTIONS) $(BUILD_DIR)/$(BIN) $(BUILD_DIR)/gmon.out > $(BUILD_DIR)/prof_flat.txt
+	gprof -a --graph $(GPROF_OPTIONS) $(BUILD_DIR)/$(BIN) $(BUILD_DIR)/gmon.out > $(BUILD_DIR)/prof_call_graph.txt
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSetPolling.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/MemMang/heap_3.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/QPeek.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/flop.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/flop.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/flop.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/flop.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/flop'
+#  Last modified 2022-08-23 20:13:51.6170624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TaskNotify.c:
+ 
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSet.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSet.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSet.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/QueueSet.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSet'
+#  Last modified 2022-08-23 20:13:52.5670624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/countsem.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/countsem.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/countsem.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/countsem.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/countsem'
+#  Last modified 2022-08-23 20:13:51.2370624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+build/main.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:48.3270624
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferDemo.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferDemo.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferDemo.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/stream_buffer.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/StreamBufferDemo.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferDemo'
+#  Last modified 2022-08-23 20:13:53.2770624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+atividade_1: build/atividade_1
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/run-time-stats-utils.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:48.6470624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils/wait_for_event.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/integer.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/integer.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/integer.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/integer.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/integer'
+#  Last modified 2022-08-23 20:13:51.7970624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueOverwrite.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueOverwrite.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueOverwrite.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/QueueOverwrite.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueOverwrite'
+#  Last modified 2022-08-23 20:13:52.3870624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/semtest.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StaticAllocation.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcSnapshotRecorder.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:54.5470624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/app.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:48.4170624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+console.h:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 19:19:00.6709688
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/stream_buffer.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:48.9670624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:42
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/QueueSetPolling.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/queue.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:49.4470624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/trcStreamingRecorder.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:54.6470624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/flop.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/TimerDemo.d:
+#  Implicit rule search has been done.
+#  Last modified 2022-08-23 20:13:53.6070624
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueSet.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/countsem.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/TaskNotify.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/streamports/File/trcStreamingPort.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/streamports/File/trcStreamingPort.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/streamports/File/trcStreamingPort.c /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/streamports/File/trcStreamingPort'
+#  Last modified 2022-08-23 20:13:54.6970624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/integer.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/QueueOverwrite.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/event_groups.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/AbortDelay.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/AbortDelay.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/AbortDelay.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/event_groups.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/stream_buffer.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/AbortDelay.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/AbortDelay'
+#  Last modified 2022-08-23 20:13:50.9970624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/StaticAllocation.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils/wait_for_event.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:23:54
+#  File has been updated.
+#  Successfully updated.
+
+build/console.o: console.c Makefile console.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'console'
+#  Last modified 2022-08-23 20:13:48.4970624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferInterrupt.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferInterrupt.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferInterrupt.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/stream_buffer.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/StreamBufferInterrupt.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferInterrupt'
+#  Last modified 2022-08-23 20:13:53.3470624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/StreamBufferDemo.d:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-08-23 20:13:53.2570624
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/PollQ.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/PollQ.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/PollQ.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/PollQ.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/PollQ'
+#  Last modified 2022-08-23 20:13:52.2470624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/BlockQ.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/BlockQ.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/BlockQ.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/BlockQ.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/BlockQ'
+#  Last modified 2022-08-23 20:13:51.0670624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/event_groups.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/event_groups.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/event_groups.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/event_groups.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/timers.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/event_groups'
+#  Last modified 2022-08-23 20:13:49.7570624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/flop.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+build//home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/dynamic.o: /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/dynamic.c Makefile /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/dynamic.c /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/FreeRTOS.h FreeRTOSConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcRecorder.h trcConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h trcSnapshotConfig.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcPortDefines.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcHardwarePort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include/trcKernelPort.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/projdefs.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/portable.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/deprecated_definitions.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/portmacro.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/mpu_wrappers.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/list.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/semphr.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/queue.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include/task.h /home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/dynamic.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: '/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/Minimal/dynamic'
+#  Last modified 2022-08-23 20:13:51.3870624
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 120):
+	-mkdir -p $(@D)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -c $< -o $@
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/QueueSet.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/countsem.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/streamports/File/trcStreamingPort.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:42
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include/AbortDelay.h:
+#  Implicit rule search has been done.
+#  Last modified 2021-12-22 17:22:44
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=191/1024=19%, Rehash=0, Collisions=31/1368=2%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 3 (2) / strings = 262 / storage = 16464 B / avg = 62 B
+# current buf: size = 8162 B / used = 195 B / count = 2 / avg = 97 B
+# other used: total = 16269 B / count = 260 / avg = 62 B
+# other free: total = 55 B / max = 50 B / min = 5 B / avg = 27 B
+
+# strcache performance: lookups = 1356 / hit rate = 80%
+# hash-table stats:
+# Load=262/8192=3%, Rehash=0, Collisions=9/1356=1%
+# Finished Make data base on Wed Aug 24 19:52:03 2022
+
+ 
