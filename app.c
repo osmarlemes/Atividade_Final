@@ -13,6 +13,7 @@
 #define TASK1_PRIORITY 1
 #define TASK2_PRIORITY 1
 #define TASK3_PRIORITY 1
+#define TASK4_PRIORITY 1
 
 #define BLACK "\033[30m" /* Black */
 #define RED "\033[31m"   /* Red */
@@ -22,6 +23,9 @@
 
 #define clear() printf("\033[H\033[J")
 #define gotoxy(x, y) printf("\033[%d;%dH", (y), (x))
+
+#define ESC   0x1B
+#define ENTER 0x0A
 
 typedef struct
 {
@@ -39,12 +43,16 @@ st_led_param_t red = {
     RED,
     100};
 
-TaskHandle_t greenTask_hdlr, redTask_hdlr, ledActionTask_hdlr;
+QueueHandle_t structQueue_key = NULL;
+QueueHandle_t structQueue_text = NULL;
+QueueHandle_t structQueue_morse = NULL;
+TaskHandle_t keyTask_hdlr, msgTask_hdlr, decodeTask_hdlr, ledTask_hdlr;
 
 #include <termios.h>
 
 static void prvTask_getChar(void *pvParameters)
 {
+    uint32_t notificationValue = 0;
     char key;
     int n;
 
@@ -66,48 +74,65 @@ static void prvTask_getChar(void *pvParameters)
     /* End of keyboard configuration */
     for (;;)
     {
-        int stop = 0;
         key = getchar();
-
-        switch (key)
+        
+        if(key > 1 )
         {
-        case '+':
-            /*Volta a task do led Green e notifica para a o led vermelho apagar*/
-            vTaskResume(greenTask_hdlr);
-            xTaskNotify(ledActionTask_hdlr, 1, eSetValueWithOverwrite);
-            break;
-        case '*':
-            /*Suspende a task Green e notifica para o led vermelho acender e o led verde apagar*/
-            vTaskSuspend(greenTask_hdlr);
-            xTaskNotify(ledActionTask_hdlr, 2, eSetValueWithOverwrite);
-            break;
-        case '0':
-        case '1':
-        case '2':
-        case '3':
-        case '4':
-        case '5':
-        case '6':
-        case '7':
-        case '8':
-        case '9':
-            /*Notifica para o led vermelho acender por 100ms e apagar em seguida*/
-            xTaskNotify(ledActionTask_hdlr, 3, eSetValueWithOverwrite);
-            break;
-
-        case 'k':
-            stop = 1;
-            break;
-        }
-        if (stop)
-        {
-            break;
+            if (xQueueSend(structQueue_key, &key, 0) != pdTRUE)
+            {
+                vTaskDelay(500 / portTICK_PERIOD_MS);
+            }
         }
         vTaskDelay(100 / portTICK_PERIOD_MS);
     }
     tcsetattr(0, TCSANOW, &initial_settings);
     ENABLE_CURSOR();
     exit(0);
+    vTaskDelete(NULL);
+}
+
+static void prvTask_processText(void *pvParameters)
+{
+    char key;
+    for(;;)
+    {
+        if(xQueueReceive(structQueue_key,&key,portMAX_DELAY) == pdPASS)
+        {
+            if(key == ENTER)
+            {
+                xTaskNotify(keyTask_hdlr, 01UL, eSetValueWithOverwrite);
+                xTaskNotify(decodeTask_hdlr, 01UL, eSetValueWithOverwrite);
+            }
+            else if (key == ESC)
+            {
+                exit(0);
+            }
+            else
+            {
+                xQueueSend(structQueue_text, &key, 0);
+            }
+            printf("%i ",key);
+        }
+        vTaskDelay(100/portTICK_PERIOD_MS);
+    }
+    vTaskDelete(NULL);
+}
+
+static void prvTask_decodificador(void *pvParameters)
+{
+    uint32_t notificationValue;
+
+    for(;;)
+    {
+        if (xTaskNotifyWait(
+                ULONG_MAX,
+                ULONG_MAX,
+                &notificationValue,
+                portMAX_DELAY))
+        {
+            printf("Deu certo miseravi!!!");
+        }
+    }
     vTaskDelete(NULL);
 }
 
@@ -190,6 +215,14 @@ static void prvTask_ledAction(void *pvParameters)
 
 void app_run(void)
 {
+    structQueue_key = xQueueCreate(100,sizeof(uint8_t));
+    structQueue_text = xQueueCreate(100,sizeof(uint8_t));
+    structQueue_morse = xQueueCreate(100,sizeof(uint8_t));
+
+    if(structQueue_key == NULL || structQueue_text == NULL || structQueue_morse == NULL)
+    {
+        exit(1);
+    }
 
     clear();
     DISABLE_CURSOR();
@@ -198,9 +231,10 @@ void app_run(void)
         "║                 ║\n"
         "╚═════════════════╝\n");
 
-    xTaskCreate(prvTask_led, "LED_green", configMINIMAL_STACK_SIZE, &green, TASK1_PRIORITY, &greenTask_hdlr);
-    xTaskCreate(prvTask_ledAction, "LED_ACTION", configMINIMAL_STACK_SIZE, NULL, TASK2_PRIORITY, &ledActionTask_hdlr);
-    xTaskCreate(prvTask_getChar, "Get_key", configMINIMAL_STACK_SIZE, NULL, TASK3_PRIORITY, NULL);
+    xTaskCreate(prvTask_getChar, "Get_key", configMINIMAL_STACK_SIZE, NULL, TASK1_PRIORITY, &keyTask_hdlr);
+    xTaskCreate(prvTask_processText, "Msg_Text", configMINIMAL_STACK_SIZE, NULL, TASK2_PRIORITY, &msgTask_hdlr);
+    xTaskCreate(prvTask_decodificador, "Decode", configMINIMAL_STACK_SIZE, NULL, TASK3_PRIORITY, &decodeTask_hdlr);
+  //  xTaskCreate(prvTask_led, "LED_Output", configMINIMAL_STACK_SIZE, &green, TASK4_PRIORITY, &ledTask_hdlr);
 
     /* Start the tasks and timer running. */
     vTaskStartScheduler();

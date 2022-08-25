@@ -1,5 +1,5 @@
 CC                    := gcc
-BIN                   := atividade_1
+BIN                   := atividade_final
 
 BUILD_DIR             := ./build
 BUILD_DIR_ABS         := $(abspath $(BUILD_DIR))
