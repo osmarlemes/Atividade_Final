@@ -97,10 +97,6 @@ st_led_param_t green = {
     6,
     GREEN,
     250};
-st_led_param_t red = {
-    13,
-    RED,
-    100};
 
 QueueHandle_t structQueue_key = NULL;
 QueueHandle_t structQueue_text = NULL;
@@ -143,8 +139,6 @@ static char* decodificador_Morse(char data)
         index = 36;
         return (uint8_t*)caracter_morse[index];
     }
-
-    return '0';
 }
 /*task responsavel por pegar o caracter do teclado*/
 static void prvTask_getChar(void *pvParameters)
@@ -427,9 +421,9 @@ void app_run(void)
     xTaskCreate(prvTask_processText, "Msg_Text", configMINIMAL_STACK_SIZE, NULL, TASK2_PRIORITY, &msgTask_hdlr);
     xTaskCreate(prvTask_decodificador, "Decode", configMINIMAL_STACK_SIZE, NULL, TASK3_PRIORITY, &decodeTask_hdlr);
 
-    /*Inicialmente suspende as task de decoder e led*/
+    /*Inicialmente suspende a task de decoder*/
     vTaskSuspend(decodeTask_hdlr);
-    //vTaskSuspend(ledTask_hdlr);
+
 
     /* Start the tasks and timer running. */
     vTaskStartScheduler();

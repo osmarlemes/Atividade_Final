@@ -8,4 +8,7 @@
             "binaryArgs": []
         }
     ],
+    "files.associations": {
+        "cstdlib": "c"
+    },
 }
