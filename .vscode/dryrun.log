@@ -1,4 +1,4 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/osmar/FreeRTOSv202112.00/IOT011/Atividade_Final'
 mkdir -p build
 gcc -I. -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/include -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Source/portable/ThirdParty/GCC/Posix/utils -I/home/osmar/FreeRTOSv202112.00/FreeRTOS/Demo/Common/include -I/home/osmar/FreeRTOSv202112.00/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace/Include -DBUILD_DIR=\"/home/osmar/FreeRTOSv202112.00/IOT011/Atividade_Final/build\" -D_WINDOWS_ -DTRACE_ON_ENTER=0 -DprojCOVERAGE_TEST=0 -ggdb3 -O3 -MMD -c main.c -o build/main.o

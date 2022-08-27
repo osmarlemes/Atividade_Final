@@ -10,10 +10,19 @@
 /* Local includes. */
 #include "console.h"
 
+static void prvTask_getChar(void *pvParameters);
+static void prvTask_led(void *pvParameters);
+static void prvTask_decodificador(void *pvParameters);
+static void prvTask_processText(void *pvParameters);
+
 #define TASK1_PRIORITY 1
 #define TASK2_PRIORITY 1
 #define TASK3_PRIORITY 1
 #define TASK4_PRIORITY 1
+
+#define DELAY_POINT  100
+#define DELAY_TRACE  200
+#define DELAY_ESPACE 400
 
 #define BLACK "\033[30m" /* Black */
 #define RED "\033[31m"   /* Red */
@@ -50,9 +59,24 @@ TaskHandle_t keyTask_hdlr, msgTask_hdlr, decodeTask_hdlr, ledTask_hdlr;
 
 #include <termios.h>
 
+/**
+ * @brief 
+ * 
+ * @param pvParameters 
+ */
+static int data_Validator(uint8_t data)
+{
+    if((data >= '0' &&  data <= '9') || (data >= 'A' && data <= 'Z') || (data >= 'a' && data <= 'z'))
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
 static void prvTask_getChar(void *pvParameters)
 {
-    uint32_t notificationValue = 0;
+    uint32_t notificationValue;
     char key;
     int n;
 
@@ -69,15 +93,29 @@ static void prvTask_getChar(void *pvParameters)
     new_settings.c_lflag &= ~ISIG;
     new_settings.c_cc[VMIN] = 0;
     new_settings.c_cc[VTIME] = 1;
-
     tcsetattr(0, TCSANOW, &new_settings);
     /* End of keyboard configuration */
+
+    printf("task 1");
     for (;;)
     {
+        if (xTaskNotifyWait(
+        ULONG_MAX,
+        ULONG_MAX,
+        &notificationValue,
+        0x0))
+        {
+            if(notificationValue == ESC)
+            {
+                
+            }
+        }
+
         key = getchar();
         
         if(key > 1 )
         {
+            printf("task 1");
             if (xQueueSend(structQueue_key, &key, 0) != pdTRUE)
             {
                 vTaskDelay(500 / portTICK_PERIOD_MS);
@@ -93,44 +131,68 @@ static void prvTask_getChar(void *pvParameters)
 
 static void prvTask_processText(void *pvParameters)
 {
-    char key;
+    char text;
+    uint32_t text_lenght = 0;
+
     for(;;)
     {
-        if(xQueueReceive(structQueue_key,&key,portMAX_DELAY) == pdPASS)
+        if(xQueueReceive(structQueue_key,&text,portMAX_DELAY) == pdPASS)
         {
-            if(key == ENTER)
+            if(text == ENTER)
             {
-                xTaskNotify(keyTask_hdlr, 01UL, eSetValueWithOverwrite);
-                xTaskNotify(decodeTask_hdlr, 01UL, eSetValueWithOverwrite);
+                printf("ENTER");
+               // vTaskSuspend(keyTask_hdlr);
+                xTaskNotify(decodeTask_hdlr, text_lenght, eSetValueWithOverwrite);
+                printf("ENTER 2");
             }
-            else if (key == ESC)
+            else if (text == ESC)
             {
-                exit(0);
+                 xTaskNotify(keyTask_hdlr, 01UL, eSetValueWithOverwrite);
             }
             else
             {
-                xQueueSend(structQueue_text, &key, 0);
+                /*Verifica se é um dado valido para repassar ao decodificador, 
+                dado valido seria numeros e letras e o espaço*/
+                printf("ta aqui");
+                if(1 == data_Validator(text))
+                {
+                    if(xQueueSend(structQueue_text, &text, 0) == pdTRUE)
+                    {
+                        text_lenght++;
+                        printf("%i/n",text_lenght);
+                    }
+                }
             }
-            printf("%i ",key);
         }
-        vTaskDelay(100/portTICK_PERIOD_MS);
+        vTaskDelay(50/portTICK_PERIOD_MS);
     }
     vTaskDelete(NULL);
 }
 
 static void prvTask_decodificador(void *pvParameters)
 {
-    uint32_t notificationValue;
+    
+    uint32_t notificationValue2;
+    uint32_t decode_lenght = 0;
+    char caracter;
 
     for(;;)
     {
+        printf("task31");
         if (xTaskNotifyWait(
                 ULONG_MAX,
                 ULONG_MAX,
-                &notificationValue,
+                &notificationValue2,
                 portMAX_DELAY))
         {
-            printf("Deu certo miseravi!!!");
+            printf("task3");
+            decode_lenght = notificationValue2; 
+        }
+        if(decode_lenght > 0)
+        {
+            printf("task 3");
+            if(xQueueReceive(structQueue_text, &caracter, 0) == pdPASS);
+            //printf("%s",caracter);
         }
     }
     vTaskDelete(NULL);
