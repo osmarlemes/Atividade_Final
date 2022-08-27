@@ -10,6 +10,8 @@
 /* Local includes. */
 #include "console.h"
 
+#include <termios.h>
+
 static void prvTask_getChar(void *pvParameters);
 static void prvTask_led(void *pvParameters);
 static void prvTask_decodificador(void *pvParameters);
@@ -35,6 +37,48 @@ static void prvTask_processText(void *pvParameters);
 
 #define ESC   0x1B
 #define ENTER 0x0A
+#define SPACE 0x20
+
+const char* caracter_morse[37] = {
+    "-----", //0 
+    ".----", //1
+    "..---", //2
+    "...--", //3
+    "....-", //4
+    ".....", //5
+    "-....", //6
+    "--...", //7
+    "---..", //8
+    "----.",  //9
+    ".-",   //A
+    "-...", //B
+    "-.-.", //C
+    "-..",  //D
+    ".",    //E
+    "..-.", //F
+    "--.",  //G
+    "....", //H
+    "..",   //I
+    ".---", //J
+    "-.-",  //K
+    ".-..", //L
+    "--",   //M
+    "-.",   //N
+    "---",  //O
+    ".--.", //P
+    "--.-", //Q
+    ".-.",  //R
+    "...",  //S
+    "-",    //T
+    "..-",  //U
+    "...-", //V
+    ".--",  //W
+    "-..-", //X
+    "-.--", //Y
+    "--..", //Z
+    "    " //space
+};
+
 
 typedef struct
 {
@@ -57,16 +101,10 @@ QueueHandle_t structQueue_text = NULL;
 QueueHandle_t structQueue_morse = NULL;
 TaskHandle_t keyTask_hdlr, msgTask_hdlr, decodeTask_hdlr, ledTask_hdlr;
 
-#include <termios.h>
-
-/**
- * @brief 
- * 
- * @param pvParameters 
- */
+/*funcao responsavel por validar os caracteres(somente letras e numeros e espaço)*/
 static int data_Validator(uint8_t data)
 {
-    if((data >= '0' &&  data <= '9') || (data >= 'A' && data <= 'Z') || (data >= 'a' && data <= 'z'))
+    if((data >= '0' &&  data <= '9') || (data >= 'A' && data <= 'Z') || (data >= 'a' && data <= 'z') || data == SPACE)
     {
         return 1;
     }
@@ -74,11 +112,41 @@ static int data_Validator(uint8_t data)
     return 0;
 }
 
+/*funcao responsavel por decodificar os caracteres em morse*/
+static char* decodificador_Morse(char data)
+{
+    char index = 0;
+
+    if((data >= '0' &&  data <= '9'))
+    {
+        index = data - '0';
+        return (uint8_t*)caracter_morse[index];
+    }
+    else if((data >= 'A' && data <= 'Z') )
+    {
+        index = (data - 'A') + 10;
+        return (uint8_t*)caracter_morse[index];
+    }
+    else if((data >= 'a' && data <= 'z'))
+    {
+        index = (data - 'a') + 10;
+        return (uint8_t*)caracter_morse[index];
+    }
+    else
+    {
+        index = 36;
+        return (uint8_t*)caracter_morse[index];
+    }
+
+    return '0';
+}
+/*task responsavel por pegar o caracter do teclado*/
 static void prvTask_getChar(void *pvParameters)
 {
-    uint32_t notificationValue;
-    char key;
-    int n;
+    uint32_t notificationValue;      /*variavel para receber a notificacao*/
+    unsigned long timer_notify = 0;  /*variavel para determinar o wait da notificacao*/
+    char key;                        /*variavel para receber a tecla pressionada*/
+
 
     /* I need to change  the keyboard behavior to
     enable nonblock getchar */
@@ -96,26 +164,32 @@ static void prvTask_getChar(void *pvParameters)
     tcsetattr(0, TCSANOW, &new_settings);
     /* End of keyboard configuration */
 
-    printf("task 1");
     for (;;)
     {
         if (xTaskNotifyWait(
         ULONG_MAX,
         ULONG_MAX,
         &notificationValue,
-        0x0))
+        timer_notify))
         {
             if(notificationValue == ESC)
             {
-                
+                break;
+            }
+            else if(notificationValue == ENTER)
+            {
+                timer_notify = portMAX_DELAY;
+            }
+            else{
+                timer_notify = 0;
             }
         }
 
         key = getchar();
         
         if(key > 1 )
+
         {
-            printf("task 1");
             if (xQueueSend(structQueue_key, &key, 0) != pdTRUE)
             {
                 vTaskDelay(500 / portTICK_PERIOD_MS);
@@ -129,6 +203,7 @@ static void prvTask_getChar(void *pvParameters)
     vTaskDelete(NULL);
 }
 
+/*task responsavel por processar as teclas passadas via queue */
 static void prvTask_processText(void *pvParameters)
 {
     char text;
@@ -138,28 +213,36 @@ static void prvTask_processText(void *pvParameters)
     {
         if(xQueueReceive(structQueue_key,&text,portMAX_DELAY) == pdPASS)
         {
-            if(text == ENTER)
-            {
-                printf("ENTER");
-               // vTaskSuspend(keyTask_hdlr);
+            if(text == ENTER && text_lenght > 0)
+            {   
+                /*manda uma notificacao para a task prvTask_getChar para pausar a leitura do teclado*/
+                xTaskNotify(keyTask_hdlr, ENTER, eSetValueWithOverwrite);
+
+                 /*coloca a task de decoder e do led em funcionamento*/
+                 vTaskResume(decodeTask_hdlr);
+
+                /*manda uma notificacao apara a a task de decoder passando a quantidade de caracteres*/
                 xTaskNotify(decodeTask_hdlr, text_lenght, eSetValueWithOverwrite);
-                printf("ENTER 2");
+
+                vTaskSuspend(msgTask_hdlr);
+
+                text_lenght = 0;
+                text = 0;
             }
             else if (text == ESC)
             {
-                 xTaskNotify(keyTask_hdlr, 01UL, eSetValueWithOverwrite);
+                /*manda uma notificacao para a task prvTask_getChar para encerrar o programa*/
+                 xTaskNotify(keyTask_hdlr, ESC, eSetValueWithOverwrite);
             }
             else
             {
                 /*Verifica se é um dado valido para repassar ao decodificador, 
                 dado valido seria numeros e letras e o espaço*/
-                printf("ta aqui");
                 if(1 == data_Validator(text))
                 {
                     if(xQueueSend(structQueue_text, &text, 0) == pdTRUE)
                     {
                         text_lenght++;
-                        printf("%i/n",text_lenght);
                     }
                 }
             }
@@ -169,30 +252,48 @@ static void prvTask_processText(void *pvParameters)
     vTaskDelete(NULL);
 }
 
+/*task responsavel por decodificar os caracteres em codigo morse (. -)*/
 static void prvTask_decodificador(void *pvParameters)
 {
     
-    uint32_t notificationValue2;
+    uint32_t notificationValue;
     uint32_t decode_lenght = 0;
+    unsigned long timer_decode = portMAX_DELAY;
     char caracter;
 
     for(;;)
     {
-        printf("task31");
         if (xTaskNotifyWait(
                 ULONG_MAX,
                 ULONG_MAX,
-                &notificationValue2,
-                portMAX_DELAY))
+                &notificationValue,
+                timer_decode))
         {
-            printf("task3");
-            decode_lenght = notificationValue2; 
+            decode_lenght = notificationValue; 
+            vTaskResume(ledTask_hdlr);
+            timer_decode = 0;
         }
+
         if(decode_lenght > 0)
         {
-            printf("task 3");
-            if(xQueueReceive(structQueue_text, &caracter, 0) == pdPASS);
-            //printf("%s",caracter);
+            if(xQueueReceive(structQueue_text, &caracter, 0) == pdPASS)
+            {
+                char* data_morse = decodificador_Morse(caracter);
+                xQueueSend(structQueue_morse, &data_morse, 0);
+                decode_lenght--;
+            }
+            
+        }
+        else
+        {
+            vTaskResume(msgTask_hdlr);
+
+            /*envia uma notificacao para a task key para que volte a ler o teclado*/
+            xTaskNotify(keyTask_hdlr, 0UL, eSetValueWithOverwrite);
+
+            timer_decode = portMAX_DELAY;
+
+            vTaskSuspend(decodeTask_hdlr);
         }
     }
     vTaskDelete(NULL);
@@ -200,13 +301,24 @@ static void prvTask_decodificador(void *pvParameters)
 
 static void prvTask_led(void *pvParameters)
 {
+    
+    char* morse_code;
+    uint8_t lenght_code = 0;
+
     // pvParameters contains LED params
     st_led_param_t *led = (st_led_param_t *)pvParameters;
     portTickType xLastWakeTime = xTaskGetTickCount();
     for (;;)
-    {
+    { 
+        if(xQueueReceive(structQueue_morse, &morse_code, 0) == pdPASS)
+        {
+            lenght_code = strlen(morse_code);
+            printf("%s ",morse_code);
+        }
+            
+        
         // console_print("@");
-        gotoxy(led->pos, 2);
+ /*       gotoxy(led->pos, 2);
         printf("%s⬤", led->color);
         fflush(stdout);
         vTaskDelay(led->period_ms / portTICK_PERIOD_MS);
@@ -214,62 +326,7 @@ static void prvTask_led(void *pvParameters)
         gotoxy(led->pos, 2);
         printf("%s ", BLACK);
         fflush(stdout);
-        vTaskDelay(led->period_ms / portTICK_PERIOD_MS);
-    }
-
-    vTaskDelete(NULL);
-}
-
-static void prvTask_ledAction(void *pvParameters)
-{
-    uint32_t notificationValue;
-    uint32_t var_pause = 0;
-
-    for (;;)
-    {        
-        if (xTaskNotifyWait(
-                ULONG_MAX,
-                ULONG_MAX,
-                &notificationValue,
-                portMAX_DELAY))
-        {
-            if(notificationValue == 1)
-            {
-                /*limpa variavel para desbloquear teclas e os leds*/
-                var_pause = 0;
-                
-                /*Apagar o led vermelho*/
-                gotoxy(red.pos, 2);
-                printf("%s ", BLACK);
-                fflush(stdout);
-            }
-            else if(notificationValue == 2 && var_pause == 0)
-            {
-                /*seta variavel para bloquear as acoes dos demais teclas*/
-                var_pause = 1;
-                gotoxy(green.pos, 2);
-                printf("%s ", BLACK);
-                fflush(stdout);
-
-                // console_print("@");
-                gotoxy(red.pos, 2);
-                printf("%s⬤", red.color);
-                fflush(stdout);
-
-            }
-            else if(notificationValue == 3 && var_pause == 0)
-            {
-                // console_print("@");
-                gotoxy(red.pos, 2);
-                printf("%s⬤", red.color);
-                fflush(stdout);
-                vTaskDelay(red.period_ms / portTICK_PERIOD_MS);
-
-                gotoxy(red.pos, 2);
-                printf("%s ", BLACK);
-                fflush(stdout);
-            }
-        }
+        vTaskDelay(led->period_ms / portTICK_PERIOD_MS);*/
     }
 
     vTaskDelete(NULL);
@@ -279,7 +336,7 @@ void app_run(void)
 {
     structQueue_key = xQueueCreate(100,sizeof(uint8_t));
     structQueue_text = xQueueCreate(100,sizeof(uint8_t));
-    structQueue_morse = xQueueCreate(100,sizeof(uint8_t));
+    structQueue_morse = xQueueCreate(100,8);
 
     if(structQueue_key == NULL || structQueue_text == NULL || structQueue_morse == NULL)
     {
@@ -296,7 +353,11 @@ void app_run(void)
     xTaskCreate(prvTask_getChar, "Get_key", configMINIMAL_STACK_SIZE, NULL, TASK1_PRIORITY, &keyTask_hdlr);
     xTaskCreate(prvTask_processText, "Msg_Text", configMINIMAL_STACK_SIZE, NULL, TASK2_PRIORITY, &msgTask_hdlr);
     xTaskCreate(prvTask_decodificador, "Decode", configMINIMAL_STACK_SIZE, NULL, TASK3_PRIORITY, &decodeTask_hdlr);
-  //  xTaskCreate(prvTask_led, "LED_Output", configMINIMAL_STACK_SIZE, &green, TASK4_PRIORITY, &ledTask_hdlr);
+    xTaskCreate(prvTask_led, "LED_Output", configMINIMAL_STACK_SIZE, &green, TASK4_PRIORITY, &ledTask_hdlr);
+
+    /*Inicialmente suspende as task de decoder e led*/
+    vTaskSuspend(decodeTask_hdlr);
+    vTaskSuspend(ledTask_hdlr);
 
     /* Start the tasks and timer running. */
     vTaskStartScheduler();
